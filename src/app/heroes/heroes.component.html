@@ -1,13 +1,9 @@
-<div *ngIf="selectedHero">
-<h2>{{selectedHero.name | uppercase}} Details</h2>
-</div>
-<div>
-  <label for="name">Hero name: </label>
-  <input id="name" [(ngModel)]="hero.name" placeholder="name">
-</div>
-<h2>My Heroes</h2>
+<h2>Alle Idole müssen sterben.</h2>
+
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>

@@ -9,6 +9,9 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './user.service';
 import {StudentComponent} from "./student/student.component";
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HeroesComponent } from './heroes/heroes.component';
     UserListComponent,
     UserFormComponent,
     StudentComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

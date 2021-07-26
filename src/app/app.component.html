@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="card bg-dark my-5">
@@ -18,9 +18,14 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
+</div>-->
 <h1>{{title}}</h1>
-<app-heroes></app-heroes>
-
-
+<nav>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/dashboard">Dashboard</a>
+</nav>
 <router-outlet></router-outlet>
+<app-messages></app-messages>
+
+
+
