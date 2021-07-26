@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularclient';
+  title = 'Eine Stadt ohne Helden ist eine Stadt ohne Zukunft';
 }
