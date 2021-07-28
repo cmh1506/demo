@@ -7,22 +7,25 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './user.service';
-import {StudentComponent} from "./student/student.component";
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import {StudentService} from "./student.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    StudentComponent,
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    StudentListComponent,
+    StudentFormComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

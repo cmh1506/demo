@@ -6,10 +6,10 @@
           <h2 class="card-title text-center text-white py-3">Liebling, es ist aus.</h2>
           <ul class="text-center list-inline py-3">
             <li class="list-inline-item">
-              <a routerLink="/users" class="btn btn-info">List Users</a>
+              <a routerLink="/students" class="btn btn-info">List Students</a>
             </li>
             <li class="list-inline-item">
-              <a routerLink="/adduser" class="btn btn-info">Add User</a>
+              <a routerLink="/addstudent" class="btn btn-info">Add Student</a>
             </li>
           </ul>
         </div>
@@ -21,8 +21,9 @@
 </div>-->
 <h1>{{title}}</h1>
 <nav>
-  <a routerLink="/heroes">Heroes</a>
-  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes" class="btn btn-info">Heroes</a>
+  <a routerLink="/dashboard" class="btn btn-info">Dashboard</a>
+  <a routerLink="/addstudent" class="btn btn-info">Add Student</a>
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
