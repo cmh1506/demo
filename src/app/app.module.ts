@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import {StudentService} from "./student.service";
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {StudentService} from "./student.service";
     MessagesComponent,
     DashboardComponent,
     StudentListComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,

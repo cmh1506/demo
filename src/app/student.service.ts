@@ -11,7 +11,7 @@ export class StudentService {
   private studentsUrl: string;
 
   constructor(private http: HttpClient) {
-    this.studentsUrl = 'http://localhost:8080/students';
+    this.studentsUrl = 'http://localhost:8090/students';
   }
 
   public findAll(): Observable<Student[]> {
@@ -19,6 +19,6 @@ export class StudentService {
   }
 
   public save(student: Student) {
-    return this.http.post<Student>('http://localhost:8080/addstudent', student);
+    return this.http.post<Student>('http://localhost:8090/addstudent', student);
   }
 }
