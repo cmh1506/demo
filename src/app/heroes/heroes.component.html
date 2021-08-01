@@ -17,5 +17,12 @@
   <button class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
+  <ag-grid-angular
+    style="width: 500px; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+  >
+  </ag-grid-angular>
 
 </div>

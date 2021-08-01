@@ -9,6 +9,17 @@ import { MessageService } from '../message.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
+  columnDefs = [
+    { field: 'make', sortable: true, filter: true },
+    { field: 'model' },
+    { field: 'price'}
+  ];
+
+  rowData = [
+    { make: 'Toyota', model: 'Celica', price: 35000 },
+    { make: 'Ford', model: 'Mondeo', price: 32000 },
+    { make: 'Porsche', model: 'Boxter', price: 72000 }
+  ];
   /*getHeroes(): void {
     this.heroes = this.heroService.getHeroes();
   }*/

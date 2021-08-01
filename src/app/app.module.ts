@@ -15,6 +15,10 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import {StudentService} from "./student.service";
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { AgGridModule } from 'ag-grid-angular';
+import {MatSelectModule} from '@angular/material/select';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgGridModule.withComponents([]),
+    NoopAnimationsModule,
+    MatSelectModule
   ],
   providers: [UserService, StudentService],
   bootstrap: [AppComponent]

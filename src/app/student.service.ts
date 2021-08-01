@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Student} from './student';
 import {Observable} from "rxjs";
-
+import { constants} from "./common/constants";
 
 
 @Injectable()
@@ -11,7 +11,7 @@ export class StudentService {
   private studentsUrl: string;
 
   constructor(private http: HttpClient) {
-    this.studentsUrl = 'http://localhost:8090/students';
+    this.studentsUrl = constants.serverUrl + '/students';
   }
 
   public findAll(): Observable<Student[]> {
@@ -19,6 +19,6 @@ export class StudentService {
   }
 
   public save(student: Student) {
-    return this.http.post<Student>('http://localhost:8090/addstudent', student);
+    return this.http.post<Student>(constants.serverUrl + '/addstudent', student);
   }
 }

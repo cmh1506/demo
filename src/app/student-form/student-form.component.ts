@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student} from "../student";
 import {StudentService} from "../student.service";
+import {UserService} from "../user.service";
+import {User} from "../user";
 
 @Component({
   selector: 'app-student-form',
@@ -11,11 +13,13 @@ import {StudentService} from "../student.service";
 export class StudentFormComponent implements OnInit {
 
   student: Student;
+  users!: User[];
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private studenService: StudentService
+    private studenService: StudentService,
+    public userService: UserService
   ) {
     this.student = new Student();
   }
@@ -29,6 +33,7 @@ export class StudentFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userService.findAll().subscribe(result => this.users = result);
   }
 
 }
