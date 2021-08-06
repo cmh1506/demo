@@ -18,6 +18,10 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { AgGridModule } from 'ag-grid-angular';
 import {MatSelectModule} from '@angular/material/select';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderComponent } from './orders/order/order.component';
+import { OrderItemsComponent } from './orders/order-items/order-items.component';
+import {OrderService} from "./shared/order.service";
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     StudentListComponent,
     StudentFormComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    OrdersComponent,
+    OrderComponent,
+    OrderItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     NoopAnimationsModule,
     MatSelectModule
   ],
-  providers: [UserService, StudentService],
+  providers: [UserService, StudentService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

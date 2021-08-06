@@ -23,6 +23,7 @@
     "ag-grid-angular": "^25.3.0",
     "ag-grid-community": "^25.3.0",
     "ng-editable-table": "^0.3.15",
+    "ngx-toastr": "^14.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

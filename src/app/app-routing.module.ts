@@ -7,6 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import {StudentListComponent} from "./student-list/student-list.component";
 import {StudentFormComponent} from "./student-form/student-form.component";
+import {OrdersComponent} from "./orders/orders.component";
+import {Order} from "./shared/order.model";
+import {OrderComponent} from "./orders/order/order.component";
 
 const routes: Routes = [
   { path: 'users', component: UserListComponent },
@@ -16,7 +19,12 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'students', component: StudentListComponent },
-  { path: 'addstudent', component: StudentFormComponent }
+  { path: 'addstudent', component: StudentFormComponent },
+  { path: 'orders', component: OrdersComponent },
+  { path: 'order', children: [
+      { path:'', component: OrderComponent },
+      { path:'edit/:id', component: OrderComponent}
+    ]}
 ];
 
 @NgModule({
